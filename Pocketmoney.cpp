@@ -2,17 +2,21 @@
 using namespace std;
 int main()
 {
-    int money,i;
-    money = 2700;
-    for ( i = 1; i <= 30; i++)
+  int pocketmoney;
+  cout << "Enter The amount of pocketmoney Mira has:";
+  cin >> pocketmoney;
+  cout << "The date in which mira can go Market according to her pocketMoney is" << endl;
+  for (int i = 1; i <= 30; i++)
+  {
+    if (i % 2 == 0)
     {
-    //   if(i%2==0){
-    //       continue;
-    //   }
-      if(money==0){
-          break;
-      }
-      money=money-500;
-      cout<<i<<endl;
+      continue;
     }
+    pocketmoney = pocketmoney - 300;
+    if (pocketmoney > 0)
+    {
+      cout << i << endl;
+    }
+  }
+  return 0;
 }
